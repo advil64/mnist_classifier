@@ -2,11 +2,10 @@
 
 # https://pytorch.org/tutorials/beginner/basics/data_tutorial.html
 
-import superimport
 
 import numpy as np
 import matplotlib.pyplot as plt
-import pyprobml_utils as pml
+# import pyprobml_utils as pml
 
 
 import torch
@@ -22,7 +21,7 @@ transform=transforms.Compose([lambda img: torchvision.transforms.functional.rota
                                 transforms.ToTensor()])
 
 training_data = datasets.EMNIST(
-    root="~/data",
+    root="./data",
     split="byclass",
     download=True,
     transform=transform
@@ -43,5 +42,5 @@ for i in range(1, cols * rows + 1):
     plt.imshow(img.squeeze(), cmap=plt.cm.binary)
 
 plt.tight_layout()
-pml.savefig("emnist-data.pdf")
+# pml.savefig("emnist-data.pdf")
 plt.show()

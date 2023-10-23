@@ -5,6 +5,8 @@ import torchvision
 from torchvision import datasets
 from torchvision import transforms
 
+from sklearn.model_selection import train_test_split
+
 data_transform = torchvision.transforms.Compose([
     torchvision.transforms.ToTensor()])
 
